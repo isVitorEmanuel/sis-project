@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.lp2.sisproject.controller.ProductsRegisterView"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp2.sisproject.controller.ProductsRegisterView">
+      <VBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="744.0" style="-fx-background-color: #000;">
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="71.0" style="-fx-background-color: #FFF; -fx-background-radius: 5;" text="01/01/2025" textOverrun="CLIP" />
+      </VBox>
+      <Label alignment="CENTER" layoutX="2.0" layoutY="40.0" prefHeight="28.0" prefWidth="742.0" text="Cadastrar produto" textFill="#8a4e4e" textOverrun="CLIP">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
 </AnchorPane>
