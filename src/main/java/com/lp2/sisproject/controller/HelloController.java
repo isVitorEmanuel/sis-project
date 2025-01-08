@@ -1,4 +1,4 @@
-package com.lp2.sisproject;
+package com.lp2.sisproject.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
