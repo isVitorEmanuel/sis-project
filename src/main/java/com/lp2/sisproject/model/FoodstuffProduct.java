@@ -5,4 +5,17 @@ import java.time.LocalDate;
 public class FoodstuffProduct extends Product {
     private LocalDate dateValidity;
     private LocalDate manufactureDate;
+
+    FoodstuffProduct(String name, long id, double price, int quantity,
+                     LocalDate dateValidity, LocalDate manufactureDate) {
+        super(name, id, price, quantity);
+        this.dateValidity = dateValidity;
+        this.manufactureDate = manufactureDate;
+    }
+
+    public void setDateValidity(LocalDate dateValidity) { this.dateValidity = dateValidity; }
+    public void setManufactureDate(LocalDate manufactureDate) { this.manufactureDate = manufactureDate; }
+
+    public LocalDate getDateValidity() { return dateValidity; }
+    public LocalDate getManufactureDate() { return manufactureDate; }
 }
