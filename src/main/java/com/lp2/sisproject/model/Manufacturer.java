@@ -8,4 +8,9 @@ public class Manufacturer implements Serializable, Validatable {
     private String name;
     private String CNPJ;
     private Address address;
+
+    @Override
+    public boolean isValid() {
+        return true;
+    }
 }
