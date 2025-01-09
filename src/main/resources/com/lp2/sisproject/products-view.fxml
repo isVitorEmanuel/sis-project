@@ -33,7 +33,6 @@
                </VBox.margin>
             </Button>
             <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" text="Cadastrar fabricante" />
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" text="Visualizar produtos" />
             <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" text="Visualizar fabricante" />
             <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" text="Gerar relatório" />
       </VBox>

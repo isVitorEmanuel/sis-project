@@ -4,7 +4,7 @@ import com.lp2.sisproject.enums.Size;
 import com.lp2.sisproject.enums.TypeProduct;
 
 public class ClothingProduct extends Product {
-    private static final TypeProduct typeProduct = TypeProduct.CLOTHING_PRODUCT;
+    private static final TypeProduct typeProduct = TypeProduct.CLOTHING_PRODUCT; //Deixar assim ou setar no construtor?
     private Size size;
 
     public ClothingProduct(

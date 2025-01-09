@@ -5,6 +5,7 @@ public abstract class Product {
     private long id;
     private double price;
     private int quantity;
+    //Adicionar um private Manufacter manufacter??
 
     Product(String name, long id, double price, int quantity) {
         this.name = name;

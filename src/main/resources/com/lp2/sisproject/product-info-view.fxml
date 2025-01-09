@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp2.sisproject.controller.ProductsInfoController">
+   <children>
+      <Label layoutX="266.0" layoutY="38.0" text="Produto:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="160.0" mnemonicParsing="false" onAction="#voltarAoMenu" text="Voltar" />
+      <VBox layoutX="131.0" layoutY="65.0" prefHeight="325.0" prefWidth="455.0">
+         <children>
+            <Label fx:id="id" text="ID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="quantidade" text="Quantidade:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="valor" text="Valor:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nome" text="Nome:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <VBox fx:id="foodProductDetails" prefHeight="68.0" prefWidth="238.0">
+               <children>
+                  <Label fx:id="dataDeValidade" text="Data de valildade:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dataDeFabricacao" text="Data de fabricação:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="eletronicProductDetails" prefHeight="68.0" prefWidth="238.0">
+               <children>
+                  <Label fx:id="informacaoTecnica" text="Informação técnica:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox fx:id="clothingProductDetails" prefHeight="68.0" prefWidth="238.0">
+               <children>
+                  <Label fx:id="tamanho" text="Tamanho:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

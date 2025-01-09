@@ -1,4 +1,4 @@
 package com.lp2.sisproject.controller;
 
-public class ProductsRegisterView {
+public class ProductsRegisterController {
 }
