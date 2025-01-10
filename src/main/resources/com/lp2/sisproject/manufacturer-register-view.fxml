@@ -21,7 +21,6 @@
                </VBox.margin>
             </Button>
             <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Visualizar fabricantes" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Gerar relatório" />
          </children>
       </VBox>
       <VBox alignment="CENTER_RIGHT" layoutY="-1.0" prefHeight="40.0" prefWidth="736.0" style="-fx-background-color: #3A3960; -fx-border-color: #FFF; -fx-border-width: 0 0 1 0;">
