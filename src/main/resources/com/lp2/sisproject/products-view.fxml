@@ -19,24 +19,24 @@
             <Blend />
          </effect>
       </Label>
-      <TableView layoutX="150.0" layoutY="79.0" prefHeight="407.0" prefWidth="564.0">
+      <TableView layoutX="177.0" layoutY="79.0" prefHeight="407.0" prefWidth="545.0">
         <columns>
-          <TableColumn prefWidth="53.0" text="ID" />
-            <TableColumn prefWidth="452.0" text="Nome" />
-          <TableColumn prefWidth="58.0" text="Quant" />
+          <TableColumn prefWidth="41.0" text="ID" />
+            <TableColumn prefWidth="429.0" text="Nome" />
+          <TableColumn prefWidth="63.0" text="Quant" />
         </columns>
       </TableView>
-      <VBox alignment="CENTER" layoutX="14.0" layoutY="42.0" prefHeight="456.0" prefWidth="123.0" spacing="30.0">
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" text="Cadastrar produto">
+      <VBox alignment="CENTER" layoutY="38.0" prefHeight="466.0" prefWidth="157.0" spacing="30.0" style="-fx-background-color: #3A3960;">
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Cadastrar produto">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" text="Cadastrar fabricante" />
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" text="Visualizar fabricante" />
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="123.0" text="Gerar relatório" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Cadastrar fabricante" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Visualizar fabricantes" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Gerar relatório" />
       </VBox>
-      <VBox alignment="CENTER_RIGHT" layoutX="-2.0" layoutY="-1.0" prefHeight="40.0" prefWidth="734.0" style="-fx-background-color: #000;">
+      <VBox alignment="CENTER_RIGHT" layoutY="-1.0" prefHeight="40.0" prefWidth="736.0" style="-fx-background-color: #3A3960; -fx-border-color: #FFF; -fx-border-width: 0 0 1 0;">
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="71.0" style="-fx-background-color: #FFF; -fx-background-radius: 5;" text="01/01/2025" textOverrun="CLIP" />
          <padding>
             <Insets left="20.0" right="20.0" />
