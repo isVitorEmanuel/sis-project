@@ -10,7 +10,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ProductsController {
-    //Atributos da view
     private Stage stage;
     private Scene scene;
     private Parent root;
