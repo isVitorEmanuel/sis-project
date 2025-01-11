@@ -100,13 +100,23 @@
                   <Blend />
                </effect>
             </Label>
-            <VBox alignment="CENTER" prefHeight="269.0" prefWidth="539.0" spacing="10.0">
+            <VBox alignment="CENTER" prefHeight="251.0" prefWidth="539.0" spacing="10.0">
                <children>
                   <HBox alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="25.0" prefWidth="547.0" spacing="30.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="115.0" text="Data de Validade: " textFill="#555555" />
+                              <DatePicker />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="25.0" prefWidth="547.0" spacing="30.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="115.0" text="Data de Fabricação:" textFill="#555555" />
                               <DatePicker />
                            </children>
                         </HBox>
