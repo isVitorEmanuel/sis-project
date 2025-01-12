@@ -1,25 +1,38 @@
 package com.lp2.sisproject.controller;
 
-import com.lp2.sisproject.util.ManipulatingWindow;
+import com.lp2.sisproject.util.RedirectWindow;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
+// TODO: Add comments JavaDoc.
 public class ProductsRegisterController {
-    private final ManipulatingWindow window = new ManipulatingWindow();
+    private final RedirectWindow redirectWindow = new RedirectWindow();
 
-    // Functions to manipulate windows.
+    @FXML
+    private Button btnManufacturers;
+
+    @FXML
+    private Button btnProducts;
+
+    @FXML
+    private Button btnRegisterManufacturer;
+
     @FXML
     void toManufacturers(ActionEvent event) {
-        this.window.toManufacturersView(event);
+        String buttonId = btnManufacturers.getId();
+        this.redirectWindow.toWindow(event, buttonId);
     }
 
     @FXML
     void toProducts(ActionEvent event) {
-        this.window.toProductsView(event);
+        String buttonId = btnProducts.getId();
+        this.redirectWindow.toWindow(event, buttonId);
     }
 
     @FXML
     void toRegisterManufacturer(ActionEvent event) {
-        this.window.toRegisterManufacturerView(event);
+        String buttonId = btnRegisterManufacturer.getId();
+        this.redirectWindow.toWindow(event, buttonId);
     }
 }
