@@ -1,6 +1,8 @@
 package com.lp2.sisproject.model;
 
-public abstract class Product {
+import java.io.Serializable;
+
+public abstract class Product implements Serializable {
     private String name;
     private long id;
     private double price;
