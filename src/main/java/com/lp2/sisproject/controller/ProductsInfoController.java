@@ -39,6 +39,7 @@ public class ProductsInfoController {
     //---------------------- Funções da view --------------------//
 
     public void voltarAoMenu(ActionEvent event) {
+        String buttonId = ((Button) event.getSource()).getId();
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/lp2/sisproject/products-view.fxml"));
             root = loader.load();
