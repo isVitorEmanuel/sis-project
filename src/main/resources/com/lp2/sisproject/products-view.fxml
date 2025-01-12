@@ -27,13 +27,13 @@
         </columns>
       </TableView>
       <VBox alignment="CENTER" layoutY="38.0" prefHeight="466.0" prefWidth="157.0" spacing="30.0" style="-fx-background-color: #3A3960;">
-            <Button fx:id="cadastrarProduto" mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Cadastrar produto">
+            <Button fx:id="btnRegisterProduct" mnemonicParsing="false" onAction="#toRegisterProduct" prefHeight="35.0" prefWidth="145.0" text="Cadastrar produto">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </Button>
-            <Button fx:id="cadastrarFabricante" mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Cadastrar fabricante" />
-            <Button fx:id="visualizarFabricantes" mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Visualizar fabricantes" />
+            <Button fx:id="btnRegisterManufacturer" mnemonicParsing="false" onAction="#toRegisterManufacturer" prefHeight="35.0" prefWidth="145.0" text="Cadastrar fabricante" />
+            <Button fx:id="btnManufacturer" mnemonicParsing="false" onAction="#toManufacturer" prefHeight="35.0" prefWidth="145.0" text="Visualizar fabricantes" />
       </VBox>
       <VBox alignment="CENTER_RIGHT" layoutY="-1.0" prefHeight="40.0" prefWidth="736.0" style="-fx-background-color: #3A3960; -fx-border-color: #FFF; -fx-border-width: 0 0 1 0;">
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0" prefWidth="71.0" style="-fx-background-color: #FFF; -fx-background-radius: 5;" text="01/01/2025" textOverrun="CLIP" />
