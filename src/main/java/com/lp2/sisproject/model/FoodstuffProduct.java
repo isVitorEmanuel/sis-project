@@ -1,7 +1,12 @@
 package com.lp2.sisproject.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDate;
 
+@Getter
+@Setter
 public class FoodstuffProduct extends Product {
     private LocalDate dateValidity;
     private LocalDate manufactureDate;
@@ -12,10 +17,4 @@ public class FoodstuffProduct extends Product {
         this.dateValidity = dateValidity;
         this.manufactureDate = manufactureDate;
     }
-
-    public void setDateValidity(LocalDate dateValidity) { this.dateValidity = dateValidity; }
-    public void setManufactureDate(LocalDate manufactureDate) { this.manufactureDate = manufactureDate; }
-
-    public LocalDate getDateValidity() { return dateValidity; }
-    public LocalDate getManufactureDate() { return manufactureDate; }
 }

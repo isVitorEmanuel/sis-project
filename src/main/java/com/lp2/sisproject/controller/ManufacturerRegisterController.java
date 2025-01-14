@@ -18,6 +18,8 @@ import javafx.util.Duration;
 public class ManufacturerRegisterController {
     private final RedirectWindow redirectWindow = new RedirectWindow();
 
+    BancoDAO bancoDAO = BancoDAO.getInstance();
+
     @FXML private Button btnManufacturers;
     @FXML private Button btnProducts;
     @FXML private Button btnRegisterProduct;
@@ -84,7 +86,7 @@ public class ManufacturerRegisterController {
             timeline.setCycleCount(1);
             timeline.play();
 
-            // TODO: Implement the save logic in bancoDAO.
+            this.bancoDAO.getManufacturers().add(manufacturer);
         }
     }
 }

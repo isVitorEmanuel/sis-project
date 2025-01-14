@@ -1,5 +1,10 @@
 package com.lp2.sisproject.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class EletronicProduct extends Product {
     private String technicalInfo;
 
@@ -7,8 +12,4 @@ public class EletronicProduct extends Product {
         super(name, id, price, quantity,manufacturer);
         this.technicalInfo = technicalInfo;
     }
-
-    public void setTechnicalInfo(String technicalInfo) { this.technicalInfo = technicalInfo; }
-
-    public String getTechnicalInfo() { return technicalInfo; }
 }

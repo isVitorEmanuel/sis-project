@@ -17,19 +17,11 @@ import static com.lp2.sisproject.handler.FileHandler.read;
 public class Main extends Application {
     BancoDAO banco = BancoDAO.getInstance();
 
-
     @Override
     public void start(Stage stage) throws IOException {
 
         read(banco.getProdutos(),banco.getManufacturers());
 
-//        // Criando produtos
-//        Product product1 = new Product("Produto A", 1, 100.0, 10, manufacturer1) {};
-//        Product product2 = new Product("Produto B", 2, 200.0, 20, manufacturer2) {};
-//        Product product3 = new Product("Produto C", 3, 300.0, 30, manufacturer3) {};
-//        Product product4 = new Product("Produto D", 4, 400.0, 40, manufacturer4) {};
-//        Product product5 = new Product("Produto E", 5, 500.0, 50, manufacturer5) {};
-//
         Manufacturer manufacturer1 = new Manufacturer("Fabricante A", "12345678000101", new Address("Rua A", "Cidade A", "Estado A", "Brasil", "11111-111"));
         Manufacturer manufacturer2 = new Manufacturer("Fabricante B", "23456789000102", new Address("Rua B", "Cidade B", "Estado B", "Brasil", "22222-222"));
 
@@ -56,6 +48,15 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("SisCaixa");
         stage.setScene(scene);
+
+        stage.setOnCloseRequest(event -> {
+            try {
+                com.lp2.sisproject.handler.FileHandler.write(banco.getProdutos(), banco.getManufacturers());
+            } catch (Exception e) {
+                System.err.println("Error ao salvar os dados: " + e.getMessage());
+            }
+        });
+
         stage.show();
     }
 
