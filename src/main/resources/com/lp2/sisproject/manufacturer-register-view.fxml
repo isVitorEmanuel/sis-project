@@ -56,13 +56,13 @@
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="88.0" text="Nome:" textFill="#555555" />
-                              <TextField prefHeight="25.0" prefWidth="168.0" />
+                              <TextField fx:id="fieldName" prefHeight="25.0" prefWidth="168.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="118.0" text="CPNJ:" textFill="#555555" />
-                              <TextField prefHeight="25.0" prefWidth="168.0" />
+                              <TextField fx:id="fieldCNPJ" prefHeight="25.0" prefWidth="168.0" />
                            </children>
                         </HBox>
                      </children>
@@ -93,13 +93,13 @@
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="88.0" text="País:" textFill="#555555" />
-                              <TextField prefHeight="25.0" prefWidth="168.0" />
+                              <TextField fx:id="fieldCountry" prefHeight="25.0" prefWidth="168.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="88.0" text="Estado:" textFill="#555555" />
-                              <TextField prefHeight="25.0" prefWidth="168.0" />
+                              <TextField fx:id="fieldState" prefHeight="25.0" prefWidth="168.0" />
                            </children>
                         </HBox>
                      </children>
@@ -109,13 +109,13 @@
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="88.0" text="Cidade:" textFill="#555555" />
-                              <TextField prefHeight="25.0" prefWidth="168.0" />
+                              <TextField fx:id="fieldCity" prefHeight="25.0" prefWidth="168.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="88.0" text="Rua:" textFill="#555555" />
-                              <TextField prefHeight="25.0" prefWidth="168.0" />
+                              <TextField fx:id="fieldStreet" prefHeight="25.0" prefWidth="168.0" />
                            </children>
                         </HBox>
                      </children>
@@ -125,7 +125,7 @@
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="88.0" text="CEP:" textFill="#555555" />
-                              <TextField prefHeight="25.0" prefWidth="168.0" />
+                              <TextField fx:id="fieldCEP" prefHeight="25.0" prefWidth="168.0" />
                            </children>
                         </HBox>
                      </children>
@@ -143,5 +143,6 @@
             <Insets left="20.0" right="20.0" />
          </padding>
       </VBox>
+      <Button fx:id="btnSave" layoutX="422.0" layoutY="416.0" mnemonicParsing="false" onAction="#save" text="Salvar" />
    </children>
 </AnchorPane>

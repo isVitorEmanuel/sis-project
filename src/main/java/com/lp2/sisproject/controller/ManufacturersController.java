@@ -9,14 +9,9 @@ import javafx.scene.control.Button;
 public class ManufacturersController {
     private final RedirectWindow redirectWindow = new RedirectWindow();
 
-    @FXML
-    private Button btnProducts;
-
-    @FXML
-    private Button btnRegisterManufacturer;
-
-    @FXML
-    private Button btnRegisterProduct;
+    @FXML private Button btnProducts;
+    @FXML private Button btnRegisterManufacturer;
+    @FXML private Button btnRegisterProduct;
 
     @FXML
     void toProducts(ActionEvent event) {

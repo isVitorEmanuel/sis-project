@@ -39,7 +39,7 @@ public class RedirectWindow {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } catch {
+        } catch (Exception e) {
             // TODO: Handle exception.
         }
     }

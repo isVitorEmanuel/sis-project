@@ -9,7 +9,7 @@ public class Manufacturer implements Serializable, Validatable {
     private String CNPJ;
     private Address address;
 
-    Manufacturer(String name, String CNPJ, Address address) {
+    public Manufacturer(String name, String CNPJ, Address address) {
         this.name = name;
         this.CNPJ = CNPJ;
         this.address = address;

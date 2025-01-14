@@ -1,6 +1,7 @@
 module com.lp2.sisproject {
     requires javafx.controls;
     requires javafx.fxml;
+    requires jdk.jconsole;
 
 
     opens com.lp2.sisproject to javafx.fxml;
