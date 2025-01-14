@@ -29,16 +29,23 @@ public class FileHandler {
         try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Products.txt"))){
             //TODO: Ajeitar esse warning, ou nao.
             ArrayList<Product> productsFromFile = (ArrayList<Product>) ois.readObject();
-            ArrayList<Manufacturer> manufacturersFromFile = (ArrayList<Manufacturer>) ois.readObject();
 
-            manufacturers.addAll(manufacturersFromFile);
             products.addAll(productsFromFile);
+        System.out.println("Products read from file");
         }catch(IOException | ClassNotFoundException e){
             System.err.println("Error reading the products file");
             //TODO: Implementar exceptions personalizadas?
         }
-        System.out.println("Products read from file");
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("Manufacturers.txt"))){
+
+            ArrayList<Manufacturer> manufacturersFromFile = (ArrayList<Manufacturer>) ois.readObject();
+
+            manufacturers.addAll(manufacturersFromFile);
+
         System.out.println("Manufacturers read from file");
+        }catch(IOException | ClassNotFoundException e){
+            System.err.println("Error reading the manufacturers file");
+        }
     }
 
     }

@@ -6,9 +6,9 @@ public class FoodstuffProduct extends Product {
     private LocalDate dateValidity;
     private LocalDate manufactureDate;
 
-    FoodstuffProduct(String name, long id, double price, int quantity,
+   public FoodstuffProduct(String name, long id, double price, int quantity,Manufacturer manufacturer,
                      LocalDate dateValidity, LocalDate manufactureDate) {
-        super(name, id, price, quantity);
+        super(name, id, price, quantity,manufacturer);
         this.dateValidity = dateValidity;
         this.manufactureDate = manufactureDate;
     }

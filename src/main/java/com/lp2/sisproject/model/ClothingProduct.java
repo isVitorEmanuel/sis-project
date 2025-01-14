@@ -7,13 +7,9 @@ public class ClothingProduct extends Product {
     private static final TypeProduct typeProduct = TypeProduct.CLOTHING_PRODUCT; //Deixar assim ou setar no construtor?
     private Size size;
 
-    public ClothingProduct(
-            String name,
-            long id,
-            double price,
-            int quantity,
+    public ClothingProduct(String name, long id, double price, int quantity,Manufacturer manufacturer,
             Size size) {
-        super(name, id, price, quantity);
+        super(name, id, price, quantity,manufacturer);
         this.size = size;
     }
 

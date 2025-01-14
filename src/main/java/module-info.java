@@ -7,5 +7,6 @@ module com.lp2.sisproject {
     opens com.lp2.sisproject to javafx.fxml;
     exports com.lp2.sisproject;
     exports com.lp2.sisproject.controller;
+    exports com.lp2.sisproject.model;
     opens com.lp2.sisproject.controller to javafx.fxml;
 }

@@ -15,6 +15,7 @@ public class BancoDAO {
 
     private BancoDAO() {
         products = new ArrayList<>();
+        manufacturers = new ArrayList<>();
     }
     public static BancoDAO getInstance() {
         if (bancoDAO == null) {
