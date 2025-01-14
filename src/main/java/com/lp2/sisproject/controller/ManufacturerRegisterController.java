@@ -1,14 +1,18 @@
 package com.lp2.sisproject.controller;
 
+import com.lp2.sisproject.dao.BancoDAO;
 import com.lp2.sisproject.model.Address;
 import com.lp2.sisproject.model.Manufacturer;
 import com.lp2.sisproject.util.RedirectWindow;
-import com.sun.tools.jconsole.JConsoleContext;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 
 // TODO: Add comments JavaDoc.
 public class ManufacturerRegisterController {
@@ -26,6 +30,8 @@ public class ManufacturerRegisterController {
     @FXML private TextField fieldName;
     @FXML private TextField fieldState;
     @FXML private TextField fieldStreet;
+
+    @FXML private Label spanSuccess;
 
     @FXML
     void toManufacturers(ActionEvent event) {
@@ -66,6 +72,17 @@ public class ManufacturerRegisterController {
         } else {
             Address newAddress = new Address(street, city, state, country, CEP);
             Manufacturer manufacturer = new Manufacturer(name, CNPJ, newAddress);
+
+            spanSuccess.setText("Fabricante cadastrado com sucesso!");
+            spanSuccess.setVisible(true);
+
+            Timeline timeline = new Timeline(new KeyFrame(
+                    Duration.seconds(3),
+                    e -> spanSuccess.setVisible(false)
+            ));
+
+            timeline.setCycleCount(1);
+            timeline.play();
 
             // TODO: Implement the save logic in bancoDAO.
         }

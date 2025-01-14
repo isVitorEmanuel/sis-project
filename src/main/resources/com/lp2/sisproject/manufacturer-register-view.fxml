@@ -143,6 +143,7 @@
             <Insets left="20.0" right="20.0" />
          </padding>
       </VBox>
-      <Button fx:id="btnSave" layoutX="422.0" layoutY="416.0" mnemonicParsing="false" onAction="#save" text="Salvar" />
+      <Button fx:id="btnSave" layoutX="421.0" layoutY="424.0" mnemonicParsing="false" onAction="#save" text="Salvar" />
+      <Label fx:id="spanSuccess" layoutX="184.0" layoutY="390.0" prefHeight="25.0" prefWidth="206.0" text="Fabricante adicionado com sucesso." visible="false" />
    </children>
 </AnchorPane>
