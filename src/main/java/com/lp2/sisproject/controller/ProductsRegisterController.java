@@ -1,7 +1,9 @@
 package com.lp2.sisproject.controller;
 
 import com.lp2.sisproject.dao.BancoDAO;
+import com.lp2.sisproject.enums.Size;
 import com.lp2.sisproject.enums.TypeProduct;
+import com.lp2.sisproject.model.ClothingProduct;
 import com.lp2.sisproject.model.EletronicProduct;
 import com.lp2.sisproject.model.Manufacturer;
 import com.lp2.sisproject.util.NumberCheck;
@@ -37,6 +39,7 @@ public class ProductsRegisterController {
     @FXML private HBox hbValidity;
 
     @FXML private ComboBox<Manufacturer> comboBoxManufac;
+    @FXML private ComboBox<Size> comboBoxSize;
     @FXML private TextField inputName;
     @FXML private TextField inputQuantity;
     @FXML private TextField inputValue;
@@ -63,7 +66,17 @@ public class ProductsRegisterController {
             System.out.println("Valido");
         }
 
-        if (this.typeProduct == TypeProduct.CLOTHING_PRODUCT) {}
+        if (this.typeProduct == TypeProduct.CLOTHING_PRODUCT) {
+            Manufacturer selectedManufacturer = comboBoxManufac.getValue();
+
+            if (!this.validatedInputClothing(selectedManufacturer)) return;
+
+            ClothingProduct clothingProduct = new ClothingProduct(inputName.getText(), 0,
+                                                        Double.parseDouble(inputValue.getText()),
+                                                        Integer.parseInt(inputQuantity.getText()),
+                                                        selectedManufacturer, comboBoxSize.getValue());
+
+        }
 
         System.out.println("Caiu aui");
         Timeline timeline = new Timeline(new KeyFrame(
@@ -78,6 +91,7 @@ public class ProductsRegisterController {
     public void initialize() {
         ArrayList<Manufacturer> manufacturers = bancoDAO.getManufacturers();
         comboBoxManufac.getItems().addAll(manufacturers);
+        comboBoxSize.getItems().addAll(Size.values());
         this.disableAllSpecificFields();
     }
 
@@ -105,6 +119,21 @@ public class ProductsRegisterController {
             WarningsAlert.invalidValues();
             return false;
         }
+        return true;
+    }
+
+    private boolean validatedInputClothing(Manufacturer manufacturer) {
+        if (manufacturer == null || this.inputName.getText().isBlank() ||
+            this.inputQuantity.getText().isBlank() || this.inputValue.getText().isBlank()) {
+            WarningsAlert.blankValues();
+            return false;
+        }
+
+        if (this.comboBoxSize.getValue() == null) {
+            WarningsAlert.invalidValues();
+            return false;
+        }
+
         return true;
     }
 
