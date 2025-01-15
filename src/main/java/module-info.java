@@ -3,6 +3,7 @@ module com.lp2.sisproject {
     requires javafx.fxml;
     requires jdk.jconsole;
     requires static lombok;
+    requires jdk.jfr;
 
 
     opens com.lp2.sisproject to javafx.fxml;
