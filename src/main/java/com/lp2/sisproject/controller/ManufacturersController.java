@@ -60,5 +60,13 @@ public class ManufacturersController implements Initializable {
 
             tableManufacturers.setItems(manufacturers);
         }
+        tableManufacturers.setOnMouseClicked(event -> {
+           if(event.getClickCount() == 2) {
+               Manufacturer selectedManufacturer = tableManufacturers.getSelectionModel().getSelectedItem();
+               if(selectedManufacturer != null) {
+                   redirectWindow.toWindow(event,selectedManufacturer);
+               }
+           }
+        });
     }
 }

@@ -22,7 +22,7 @@ public class ProductsInfoController {
     private final RedirectWindow redirectWindow = new RedirectWindow();
 
     @FXML
-    private Button btnManufacturers;
+    private Button btnRegisterProduct;
 
     @FXML
     private Button btnProducts;
@@ -83,7 +83,7 @@ public class ProductsInfoController {
 
     @FXML
     void toRegisterProduct(ActionEvent event) {
-        String buttonId = btnManufacturers.getId();
+        String buttonId = btnRegisterProduct.getId();
         this.redirectWindow.toWindow(event, buttonId);
     }
 

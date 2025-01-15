@@ -1,6 +1,9 @@
 package com.lp2.sisproject.util;
 
+import com.lp2.sisproject.controller.ManufacturerInfoController;
 import com.lp2.sisproject.controller.ProductsInfoController;
+import com.lp2.sisproject.model.Manufacturer;
+import com.lp2.sisproject.model.Product;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -25,7 +28,7 @@ public class RedirectWindow {
                 "btnRegisterProduct", defaultPath+"products-register-view.fxml",
                 "btnProducts", defaultPath+"products-view.fxml",
                 "btnManufacturers", defaultPath+"manufacturers-view.fxml",
-                "btnProductInfo",defaultPath+"products-info-view.fxml",
+                "btnProductInfo",defaultPath+"product-info-view.fxml",
                 "btnManufacturerInfo",defaultPath+"manufacturer-info-view.fxml"
         );
 
@@ -52,20 +55,36 @@ public class RedirectWindow {
         }
     }
 
-    public void toWindow(MouseEvent event, String buttonId) {
+    public void toWindow(MouseEvent event, Object entity) {
         try{
-            String url = getWindowURL(buttonId);
+            FXMLLoader loader;
+            String url;
+            if(entity instanceof Product){
+                url = getWindowURL("btnProductInfo");
+                loader = new FXMLLoader(getClass().getResource(url));
+            }else if (entity instanceof Manufacturer) {
+                 url = getWindowURL("btnManufacturerInfo");
+                loader = new FXMLLoader(getClass().getResource(url));
+            } else {
+                throw new IllegalArgumentException("Unsupported entity type.");
+            }
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(url));
             Parent root = loader.load();
 
-            if(buttonId.equals("btnProductInfo")){
+            if(entity instanceof Product){
             ProductsInfoController controller = loader.getController();
+            controller.setProduct((Product) entity);
             }else{
-            //TODO: if manufacturer, load his controller
+                ManufacturerInfoController controller = loader.getController();
+                controller.setManufacturer((Manufacturer) entity);
             }
-        }catch (IOException e){
 
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }catch (IOException e){
+            //TODO: Handle exception
         }
     }
 }

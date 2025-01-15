@@ -79,29 +79,12 @@ public class ProductsController implements Initializable {
 
             TableProducts.setItems(products);
         }
-
-        //TODO: Ajeitar para permitir redirect do jeito que está na classe.
-
+        //Realiza o redirect para product-info-view por meio do click duplo no elemento desejado
         TableProducts.setOnMouseClicked(event -> {
             if(event.getClickCount() == 2){
                 Product selectedProduct = TableProducts.getSelectionModel().getSelectedItem();
                 if(selectedProduct != null){
-                    try{
-
-                            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/lp2/sisproject/product-info-view.fxml"));
-                    Parent root = loader.load();
-
-                    ProductsInfoController controller = loader.getController();
-                    controller.setProduct(selectedProduct);
-
-                    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    Scene scene = new Scene(root);
-                    stage.setScene(scene);
-                    stage.show();
-
-                    }catch (IOException e){
-                        e.printStackTrace();
-                    }
+                  redirectWindow.toWindow(event, selectedProduct);
                 }
             }
 
