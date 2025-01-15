@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp2.sisproject.controller.ProductsInfoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lp2.sisproject.controller.ManufacturerInfoController">
    <children>
       <Label layoutX="399.0" layoutY="54.0" text="Produtor:" textFill="#8a4e4e">
          <font>
@@ -21,7 +21,7 @@
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="quantidade" text="Nome:">
+                        <Label fx:id="nome" text="Nome:">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -30,7 +30,7 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="valor" text="CNPJ:">
+                        <Label fx:id="cnpj" text="CNPJ:">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -43,13 +43,13 @@
       </VBox>
       <VBox alignment="CENTER" layoutY="34.0" prefHeight="466.0" prefWidth="157.0" spacing="30.0" style="-fx-background-color: #3A3960;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Cadastrar produto">
+            <Button fx:id="btnRegisterProduct" mnemonicParsing="false" onAction="#toRegisterProduct" prefHeight="35.0" prefWidth="145.0" text="Cadastrar produto">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Cadastrar fabricante" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="145.0" text="Visualizar fabricantes" />
+            <Button fx:id="btnRegisterManufacturer" mnemonicParsing="false" onAction="#toRegisterManufacturer" prefHeight="35.0" prefWidth="145.0" text="Cadastrar fabricante" />
+            <Button fx:id="btnManufacturers" mnemonicParsing="false" onAction="#toProducts" prefHeight="35.0" prefWidth="145.0" text="Visualizar fabricantes" />
          </children>
       </VBox>
       <VBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="728.0" style="-fx-background-color: #3A3960; -fx-border-color: #FFF; -fx-border-width: 0 0 1 0;">
@@ -69,7 +69,7 @@
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="quantidade1" text="Cidade:">
+                  <Label fx:id="cidade" text="Cidade:">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -78,7 +78,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="valor1" text="Rua:">
+                  <Label fx:id="rua" text="Rua:">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -87,7 +87,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="quantidade12" text="CEP:">
+                  <Label fx:id="cep" text="CEP:">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -96,7 +96,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="quantidade11" text="Estado:">
+                  <Label fx:id="estado" text="Estado:">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -105,7 +105,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="quantidade13" text="País:">
+                  <Label fx:id="pais" text="País:">
                      <font>
                         <Font size="14.0" />
                      </font>
