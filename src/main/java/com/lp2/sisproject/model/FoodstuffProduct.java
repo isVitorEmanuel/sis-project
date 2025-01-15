@@ -17,4 +17,9 @@ public class FoodstuffProduct extends Product {
         this.dateValidity = dateValidity;
         this.manufactureDate = manufactureDate;
     }
+
+    @Override
+    public boolean isValid() {
+        return true;
+    }
 }

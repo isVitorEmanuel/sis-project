@@ -1,6 +1,8 @@
 package com.lp2.sisproject;
 
 import com.lp2.sisproject.dao.BancoDAO;
+import com.lp2.sisproject.enums.Size;
+import com.lp2.sisproject.model.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,6 +12,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.Optional;
 
 import static com.lp2.sisproject.handler.FileHandler.read;

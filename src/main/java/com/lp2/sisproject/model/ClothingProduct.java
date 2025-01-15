@@ -18,4 +18,9 @@ public class ClothingProduct extends Product {
         super(name, id, price, quantity, manufacturer);
         this.size = size;
     }
+
+    @Override
+    public boolean isValid() {
+        return false;
+    }
 }

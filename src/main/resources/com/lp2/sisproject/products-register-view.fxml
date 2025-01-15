@@ -7,7 +7,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -60,13 +59,13 @@
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="88.0" text="Nome:" textFill="#555555" />
-                              <TextField prefHeight="25.0" prefWidth="168.0" />
+                              <TextField fx:id="inputName" prefHeight="25.0" prefWidth="168.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="118.0" text="Quantidade:" textFill="#555555" />
-                              <TextField prefHeight="25.0" prefWidth="168.0" />
+                              <TextField fx:id="inputQuantity" prefHeight="25.0" prefWidth="168.0" />
                            </children>
                         </HBox>
                      </children>
@@ -76,7 +75,7 @@
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="88.0" text="Valor:" textFill="#555555" />
-                              <TextField prefHeight="25.0" prefWidth="168.0" />
+                              <TextField fx:id="inputValue" prefHeight="25.0" prefWidth="168.0" />
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="22.0" prefWidth="200.0">
@@ -102,42 +101,42 @@
             </Label>
             <VBox alignment="CENTER" prefHeight="192.0" prefWidth="539.0" spacing="10.0">
                <children>
-                  <HBox alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                  <HBox fx:id="hbValidity" alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="25.0" prefWidth="547.0" spacing="30.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="115.0" text="Data de Validade: " textFill="#555555" />
-                              <DatePicker />
+                              <DatePicker fx:id="inputDataValidity" />
                            </children>
                         </HBox>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                  <HBox fx:id="hbManufacture" alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="25.0" prefWidth="547.0" spacing="30.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="115.0" text="Data de Fabricação:" textFill="#555555" />
-                              <DatePicker />
+                              <DatePicker fx:id="inputDataManufacturer" />
                            </children>
                         </HBox>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
+                  <HBox fx:id="hbSize" alignment="CENTER" fillHeight="false" prefHeight="37.0" prefWidth="483.0" spacing="125.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="25.0" prefWidth="542.0" spacing="25.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="95.0" text="Tamanho:" textFill="#555555" />
-                              <ComboBox prefHeight="25.0" prefWidth="145.0" />
+                              <ComboBox fx:id="comboBoxSize" prefHeight="25.0" prefWidth="145.0" />
                            </children>
                         </HBox>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" fillHeight="false" prefHeight="70.0" prefWidth="539.0" spacing="125.0">
+                  <HBox fx:id="hbSpecs" alignment="CENTER" fillHeight="false" prefHeight="70.0" prefWidth="539.0" spacing="125.0">
                      <children>
                         <HBox alignment="CENTER" prefHeight="48.0" prefWidth="539.0">
                            <children>
                               <Label prefHeight="17.0" prefWidth="152.0" text="Especificações Técnicas:" textFill="#555555" />
-                              <TextArea prefHeight="40.0" prefWidth="177.0" />
+                              <TextArea fx:id="textAreaSpec" prefHeight="40.0" prefWidth="177.0" />
                            </children>
                         </HBox>
                      </children>
@@ -154,12 +153,12 @@
       </VBox>
       <HBox alignment="CENTER" layoutX="321.0" layoutY="67.0" prefHeight="25.0" prefWidth="252.0">
          <children>
-            <ToggleButton mnemonicParsing="false" text="Eletrônico" textFill="#555555" />
-            <ToggleButton mnemonicParsing="false" prefHeight="19.0" prefWidth="84.0" text="Vestuário" textFill="#555555" />
-            <ToggleButton mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Alimentos" textFill="#555555" />
+            <Button fx:id="btnElectronics" mnemonicParsing="false" onAction="#selectElectronics" text="Eletrônicos" />
+            <Button fx:id="btnClothing" mnemonicParsing="false" onAction="#selectClothing" text="Vestuário" />
+            <Button fx:id="btnFood" mnemonicParsing="false" onAction="#selectFood" text="Alimentos" />
          </children>
       </HBox>
-      <Label fx:id="sucessLabel" layoutX="176.0" layoutY="413.0" prefHeight="28.0" prefWidth="539.0" text="Produto cadastrado com sucesso." />
+      <Label fx:id="sucessLabel" layoutX="176.0" layoutY="413.0" prefHeight="28.0" prefWidth="539.0" text="Produto cadastrado com sucesso." visible="false" />
       <Button fx:id="btnSave" layoutX="420.0" layoutY="451.0" mnemonicParsing="false" onAction="#save" text="Salvar" />
    </children>
 </AnchorPane>

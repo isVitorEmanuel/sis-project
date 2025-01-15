@@ -1,5 +1,6 @@
 package com.lp2.sisproject.model;
 
+import com.lp2.sisproject.interfaces.Validatable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,7 +12,7 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public abstract class Product implements Serializable {
+public abstract class Product implements Serializable, Validatable {
     private String name;
     private long id;
     private double price;
