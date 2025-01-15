@@ -23,7 +23,6 @@ public class ManufacturerRegisterController {
     @FXML private Button btnManufacturers;
     @FXML private Button btnProducts;
     @FXML private Button btnRegisterProduct;
-    @FXML private Button btnSave;
 
     @FXML private TextField fieldCEP;
     @FXML private TextField fieldCNPJ;
@@ -54,7 +53,7 @@ public class ManufacturerRegisterController {
     }
 
     @FXML
-    void save(ActionEvent event) {
+    void save() {
         String name = fieldName.getText();
         String CNPJ = fieldCNPJ.getText();
         String state = fieldState.getText();
@@ -80,7 +79,7 @@ public class ManufacturerRegisterController {
 
             Timeline timeline = new Timeline(new KeyFrame(
                     Duration.seconds(3),
-                    e -> spanSuccess.setVisible(false)
+                    _ -> spanSuccess.setVisible(false)
             ));
 
             timeline.setCycleCount(1);

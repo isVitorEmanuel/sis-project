@@ -21,4 +21,9 @@ public class Manufacturer implements Serializable, Validatable {
     public boolean isValid() {
         return true;
     }
+
+    @Override
+    public String toString() {
+        return name + " (" + CNPJ + ")";
+    }
 }
